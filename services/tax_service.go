@@ -92,7 +92,7 @@ func (ts *TaxService) UpdateTax(input req.TaxUpdateRequest) (tax *models.Tax, re
 
 	tx := ts.db().Begin() // begin a transaction
 
-	// update data student in table tax
+	// update data tax in table tax
 	result = tx.Model(&models.Tax{}).
 		Where("id = ?", input.TaxId).
 		Where("item_id = ?", input.ItemId).
