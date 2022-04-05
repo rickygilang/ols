@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "43f6f52b-7641-4007-981d-858b967f7bff",
+		"_postman_id": "80ae3b32-5750-4f2c-b305-804536a2b5fd",
 		"name": "OLS Postman",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -304,7 +304,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"Kacang Hijau\"\r\n}",
+									"raw": "{\r\n    \"name\": \"Baju Batik\",\r\n    \"taxes\": [\r\n        {\r\n            \"name\": \"Pph Baju Batik\",\r\n            \"rate\": 5\r\n        },\r\n        {\r\n            \"name\": \"Pjk B Baju Batik\",\r\n            \"rate\": 10\r\n        },\r\n        {\r\n            \"name\": \"Pjk C Baju Batik\",\r\n            \"rate\": 15\r\n        }\r\n    ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -390,7 +390,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"Jamur Merah\"\r\n}",
+									"raw": "{\r\n    \"id\": 7,\r\n    \"name\": \"Baju Batik\",\r\n    \"taxes\": [\r\n        {\r\n            \"id\": 22,\r\n            \"name\": \"PJK Baju Batik\",\r\n            \"rate\": 15\r\n        },\r\n        {\r\n            \"id\": 23,\r\n            \"name\": \"PJK B Baju Batik\",\r\n            \"rate\": 15\r\n        },\r\n        {\r\n            \"id\": 24,\r\n            \"name\": \"PJK C Baju Batik\",\r\n            \"rate\": 15\r\n        },\r\n        {\r\n            \"id\": 25,\r\n            \"name\": \"Pjk C Baju Batik ke 24\",\r\n            \"rate\": 15\r\n        }\r\n    ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
