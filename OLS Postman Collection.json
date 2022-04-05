@@ -1,0 +1,598 @@
+{
+	"info": {
+		"_postman_id": "0be47f3e-92e8-4b45-ac10-4498311479c4",
+		"name": "OLS Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Tax",
+			"item": [
+				{
+					"name": "Create Tax",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"item_id\": 2,\r\n    \"name\": \"Pjk C Kacang Hijau\",\r\n    \"rate\": 15\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}tax/create",
+							"host": [
+								"{{api_url}}tax"
+							],
+							"path": [
+								"create"
+							]
+						},
+						"description": "this API for request create tax\n\n**json request**\n\n| request | description |\n| --- | --- |\n| item_id | required, Item's ID |\n| name | required, Tax's name |\n| rate | required, percentage of tax |\n\nResult\n\n| **meta** | **error** |  |\n| --- | --- | --- |\n|  | message |  |\n| data | id | Tax's ID |\n|  | item_id | Item's ID |\n|  | name | Tax's name |\n|  | rate | percentage of tax |"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"item_id\": 2,\r\n    \"name\": \"Pjk C Kacang Hijau\",\r\n    \"rate\": 15\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}tax/create",
+									"host": [
+										"{{api_url}}tax"
+									],
+									"path": [
+										"create"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"meta\": {\r\n        \"error\": false,\r\n        \"error_message\": null,\r\n        \"http_response_code\": 200\r\n    },\r\n    \"data\": {\r\n        \"id\": 15,\r\n        \"item_id\": 2,\r\n        \"name\": \"Pjk C Kacang Hijau\",\r\n        \"rate\": \"15%\"\r\n    }\r\n}"
+						},
+						{
+							"name": "Invalid",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"item_id\": 0,\r\n    \"name\": \"Pjk C Kacang Hijau\",\r\n    \"rate\": 15\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}tax/create",
+									"host": [
+										"{{api_url}}tax"
+									],
+									"path": [
+										"create"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"meta\": {\r\n        \"error\": true,\r\n        \"error_message\": \"Invalid parameter\",\r\n        \"http_response_code\": 400\r\n    },\r\n    \"data\": {\r\n        \"errors\": {\r\n            \"ItemId\": \"ItemId is required\"\r\n        }\r\n    }\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Tax",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 0,\r\n    \"item_id\": 2,\r\n    \"name\": \"Pph\",\r\n    \"rate\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}tax/update",
+							"host": [
+								"{{api_url}}tax"
+							],
+							"path": [
+								"update"
+							]
+						},
+						"description": "this API for request update tax\n\n**json request**\n\n| request | description |\n| --- | --- |\n| id | required, Tax's ID |\n| item_id | required, Item's ID |\n| name | required, Tax's name |\n| rate | required, Tax's rate |\n\nResult\n\n| **meta** | **error** |  |\n| --- | --- | --- |\n|  | message |  |\n|  | code |  |\n| data | id | Tax's ID |\n|  | item_id | Item's ID |\n|  | name | Tax's name |\n|  | rate | Tax's rate |"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"item_id\": 2,\r\n    \"name\": \"Pph\",\r\n    \"rate\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}tax/update",
+									"host": [
+										"{{api_url}}tax"
+									],
+									"path": [
+										"update"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"meta\": {\r\n        \"error\": false,\r\n        \"error_message\": null,\r\n        \"http_response_code\": 200\r\n    },\r\n    \"data\": {\r\n        \"id\": 1,\r\n        \"item_id\": 2,\r\n        \"name\": \"Pph\",\r\n        \"rate\": \"10%\"\r\n    }\r\n}"
+						},
+						{
+							"name": "Invalid",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 0,\r\n    \"item_id\": 2,\r\n    \"name\": \"Pph\",\r\n    \"rate\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}tax/update",
+									"host": [
+										"{{api_url}}tax"
+									],
+									"path": [
+										"update"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"meta\": {\r\n        \"error\": true,\r\n        \"error_message\": \"Invalid parameter\",\r\n        \"http_response_code\": 400\r\n    },\r\n    \"data\": {\r\n        \"errors\": {\r\n            \"TaxId\": \"TaxId is required\"\r\n        }\r\n    }\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Tax",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"item_id\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}tax/delete",
+							"host": [
+								"{{api_url}}tax"
+							],
+							"path": [
+								"delete"
+							]
+						},
+						"description": "this API for request delete tax\n\n**json request**\n\n| request | description |\n| --- | --- |\n| id | required, Tax's ID |\n| item_id | Item's ID |\n\nResult\n\n| **meta** | **error** |  |\n| --- | --- | --- |\n|  | message |  |\n|  | code |  |\n| data | is_success | Result from delete process |"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 18,\r\n    \"item_id\":2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}tax/delete",
+									"host": [
+										"{{api_url}}tax"
+									],
+									"path": [
+										"delete"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"meta\": {\r\n        \"error\": false,\r\n        \"error_message\": null,\r\n        \"http_response_code\": 200\r\n    },\r\n    \"data\": {\r\n        \"is_success\": true\r\n    }\r\n}"
+						},
+						{
+							"name": "Invalid",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 0,\r\n    \"item_id\":3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}tax/delete",
+									"host": [
+										"{{api_url}}tax"
+									],
+									"path": [
+										"delete"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"meta\": {\r\n        \"error\": true,\r\n        \"error_message\": \"Invalid parameter\",\r\n        \"http_response_code\": 400\r\n    },\r\n    \"data\": {\r\n        \"errors\": {\r\n            \"TaxId\": \"TaxId is required\"\r\n        }\r\n    }\r\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Item",
+			"item": [
+				{
+					"name": "Create Item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Sayur Bayam\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}item/create",
+							"host": [
+								"{{api_url}}item"
+							],
+							"path": [
+								"create"
+							]
+						},
+						"description": "this API for request create item\n\n**json request**\n\n| request | description |\n| --- | --- |\n| name | required, Item's name |\n\nResult\n\n| **meta** | **error** |  |\n| --- | --- | --- |\n|  | message |  |\n|  | code |  |\n| data | id | Item's ID |\n|  | name | Item's name |"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Kacang Hijau\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}item/create",
+									"host": [
+										"{{api_url}}item"
+									],
+									"path": [
+										"create"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"meta\": {\n        \"error\": false,\n        \"error_message\": null,\n        \"http_response_code\": 200\n    },\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Kacang Hijau\"\n    }\n}"
+						},
+						{
+							"name": "Invalid",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}item/create",
+									"host": [
+										"{{api_url}}item"
+									],
+									"path": [
+										"create"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"meta\": {\r\n        \"error\": true,\r\n        \"error_message\": \"Invalid parameter\",\r\n        \"http_response_code\": 400\r\n    },\r\n    \"data\": {\r\n        \"errors\": {\r\n            \"ItemName\": \"ItemName is required\"\r\n        }\r\n    }\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"Jamur Merah\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}item/update",
+							"host": [
+								"{{api_url}}item"
+							],
+							"path": [
+								"update"
+							]
+						},
+						"description": "this API for request update item\n\n**json request**\n\n| request | description |\n| --- | --- |\n| id | Item's ID |\n| name | Item's name |\n\nResult\n\n| **meta** | **error** |  |\n| --- | --- | --- |\n|  | message |  |\n|  | code |  |\n| data | id | Item's ID |\n|  | name |"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"Jamur Merah\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}school/get_list",
+									"host": [
+										"{{api_url}}school"
+									],
+									"path": [
+										"get_list"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"meta\": {\r\n        \"error\": false,\r\n        \"error_message\": null,\r\n        \"http_response_code\": 200\r\n    },\r\n    \"data\": {\r\n        \"id\": 2,\r\n        \"name\": \"Jamur Merah\"\r\n    }\r\n}"
+						},
+						{
+							"name": "Invalid",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}item/update",
+									"host": [
+										"{{api_url}}item"
+									],
+									"path": [
+										"update"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"meta\": {\r\n        \"error\": true,\r\n        \"error_message\": \"Invalid parameter\",\r\n        \"http_response_code\": 400\r\n    },\r\n    \"data\": {\r\n        \"errors\": {\r\n            \"ItemName\": \"ItemName is required\"\r\n        }\r\n    }\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}item/delete",
+							"host": [
+								"{{api_url}}item"
+							],
+							"path": [
+								"delete"
+							]
+						},
+						"description": "this API for request school list\n\n**json request**\n\n| request | description |\n| --- | --- |\n| school_name | School's name |\n| public_available | required, School's public available, true/false (true by default); |\n| status | required, School's status, true/false (true by default); |\n\nResult\n\n| **meta** | **error** |  |\n| --- | --- | --- |\n|  | message |  |\n|  | code |  |\n| data | school_id | this ID use for verify OTP |\n|  | school_name | status 0 = no error |\n|  | public_available | true/false (true by default); true = to public available school list, false = to public unavailable school list |\n|  | status | true/false (true by default); true = to show active school, false = to show inactive school |"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}item/delete",
+									"host": [
+										"{{api_url}}item"
+									],
+									"path": [
+										"delete"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"meta\": {\r\n        \"error\": false,\r\n        \"error_message\": null,\r\n        \"http_response_code\": 200\r\n    },\r\n    \"data\": {\r\n        \"is_success\": true\r\n    }\r\n}"
+						},
+						{
+							"name": "Invalid",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}item/delete",
+									"host": [
+										"{{api_url}}item"
+									],
+									"path": [
+										"delete"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"meta\": {\r\n        \"error\": true,\r\n        \"error_message\": \"Invalid parameter\",\r\n        \"http_response_code\": 400\r\n    },\r\n    \"data\": {\r\n        \"errors\": {\r\n            \"ItemId\": \"ItemId is required\"\r\n        }\r\n    }\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Get List",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}item/get_list",
+							"host": [
+								"{{api_url}}item"
+							],
+							"path": [
+								"get_list"
+							]
+						},
+						"description": "this API for request school list\n\n**json request**\n\n| request | description |\n| --- | --- |\n| school_name | School's name |\n| public_available | required, School's public available, true/false (true by default); |\n| status | required, School's status, true/false (true by default); |\n\nResult\n\n| **meta** | **error** |  |\n| --- | --- | --- |\n|  | message |  |\n|  | code |  |\n| data | school_id | this ID use for verify OTP |\n|  | school_name | status 0 = no error |\n|  | public_available | true/false (true by default); true = to public available school list, false = to public unavailable school list |\n|  | status | true/false (true by default); true = to show active school, false = to show inactive school |"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}item/get_list",
+									"host": [
+										"{{api_url}}item"
+									],
+									"path": [
+										"get_list"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "api_url",
+			"value": "http://localhost:8099/"
+		}
+	]
+}
