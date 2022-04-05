@@ -69,7 +69,7 @@ func (ts *ItemService) UpdateItem(input req.ItemUpdateRequest) (item *models.Ite
 
 	tx := ts.db().Begin() // begin a transaction
 
-	// update data
+	// update data item
 	result = tx.Model(&models.Item{}).
 		Where("id = ?", input.ItemId).
 		Updates(map[string]interface{}{
@@ -85,9 +85,28 @@ func (ts *ItemService) UpdateItem(input req.ItemUpdateRequest) (item *models.Ite
 		return nil, responseError
 	}
 
+	// update data tax
+	for _, detailTax := range input.Taxes {
+		result = tx.Model(&models.Tax{}).
+			Where("id = ?", detailTax.Id).
+			Updates(map[string]interface{}{
+				"name": detailTax.Name,
+				"rate": detailTax.Rate,
+			})
+		if result.Error != nil {
+			tx.Rollback()
+			responseError = &helpers.ResponseError{
+				HttpResponseCode: http.StatusInternalServerError,
+				ErrorMessage:     "Fail update database",
+				ErrorDetail:      result.Error,
+			}
+			return nil, responseError
+		}
+	}
+
 	tx.Commit()
 
-	result = ts.db().Where("id = ?", input.ItemId).Find(&item) // get new data Item
+	result = ts.db().Where("id = ?", input.ItemId).Preload("Taxes").Find(&item) // get new data Item
 	return item, nil
 }
 
