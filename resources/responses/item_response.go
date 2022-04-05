@@ -5,15 +5,23 @@ import (
 	"strconv"
 )
 
-type ItemResponse struct {
-	ID   int    `json:"id"`
-	Name string `json:"name"`
+type ListTaxResponse struct {
+	Id   int    ` json:"id"`
+	Name string ` json:"name"`
+	Rate string `json:"rate"`
 }
 
-func FormatItemResponse(Item models.Item) ItemResponse {
+type ItemResponse struct {
+	ID    int          `json:"id"`
+	Name  string       `json:"name"`
+	Taxes []models.Tax `json:"taxes,omitempty"`
+}
+
+func FormatItemResponse(item models.Item) ItemResponse {
 	data := ItemResponse{
-		ID:   Item.Id,
-		Name: Item.Name,
+		ID:    item.Id,
+		Name:  item.Name,
+		Taxes: item.Taxes,
 	}
 
 	return data
@@ -29,12 +37,6 @@ func FormatItemSuccessResponse(IsSuccess bool) ItemSuccessResponse {
 	}
 
 	return data
-}
-
-type ListTaxResponse struct {
-	Id   int    ` json:"id"`
-	Name string ` json:"name"`
-	Rate string `json:"rate"`
 }
 
 type ListItemResponse struct {
