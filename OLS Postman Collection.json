@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "0be47f3e-92e8-4b45-ac10-4498311479c4",
+		"_postman_id": "43f6f52b-7641-4007-981d-858b967f7bff",
 		"name": "OLS Postman",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -58,8 +58,8 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
 							"body": "{\r\n    \"meta\": {\r\n        \"error\": false,\r\n        \"error_message\": null,\r\n        \"http_response_code\": 200\r\n    },\r\n    \"data\": {\r\n        \"id\": 15,\r\n        \"item_id\": 2,\r\n        \"name\": \"Pjk C Kacang Hijau\",\r\n        \"rate\": \"15%\"\r\n    }\r\n}"
 						},
@@ -88,7 +88,7 @@
 								}
 							},
 							"_postman_previewlanguage": "json",
-							"header": null,
+							"header": [],
 							"cookie": [],
 							"body": "{\r\n    \"meta\": {\r\n        \"error\": true,\r\n        \"error_message\": \"Invalid parameter\",\r\n        \"http_response_code\": 400\r\n    },\r\n    \"data\": {\r\n        \"errors\": {\r\n            \"ItemId\": \"ItemId is required\"\r\n        }\r\n    }\r\n}"
 						}
@@ -144,8 +144,8 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
 							"body": "{\r\n    \"meta\": {\r\n        \"error\": false,\r\n        \"error_message\": null,\r\n        \"http_response_code\": 200\r\n    },\r\n    \"data\": {\r\n        \"id\": 1,\r\n        \"item_id\": 2,\r\n        \"name\": \"Pph\",\r\n        \"rate\": \"10%\"\r\n    }\r\n}"
 						},
@@ -173,8 +173,8 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
 							"body": "{\r\n    \"meta\": {\r\n        \"error\": true,\r\n        \"error_message\": \"Invalid parameter\",\r\n        \"http_response_code\": 400\r\n    },\r\n    \"data\": {\r\n        \"errors\": {\r\n            \"TaxId\": \"TaxId is required\"\r\n        }\r\n    }\r\n}"
 						}
@@ -230,8 +230,8 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
 							"body": "{\r\n    \"meta\": {\r\n        \"error\": false,\r\n        \"error_message\": null,\r\n        \"http_response_code\": 200\r\n    },\r\n    \"data\": {\r\n        \"is_success\": true\r\n    }\r\n}"
 						},
@@ -259,8 +259,8 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
 							"body": "{\r\n    \"meta\": {\r\n        \"error\": true,\r\n        \"error_message\": \"Invalid parameter\",\r\n        \"http_response_code\": 400\r\n    },\r\n    \"data\": {\r\n        \"errors\": {\r\n            \"TaxId\": \"TaxId is required\"\r\n        }\r\n    }\r\n}"
 						}
@@ -278,7 +278,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Sayur Bayam\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Baju Batik\",\r\n    \"taxes\": [\r\n        {\r\n            \"name\": \"Pph Baju Batik\",\r\n            \"rate\": 5\r\n        },\r\n        {\r\n            \"name\": \"Pjk B Baju Batik\",\r\n            \"rate\": 10\r\n        },\r\n        {\r\n            \"name\": \"Pjk C Baju Batik\",\r\n            \"rate\": 15\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -322,7 +322,7 @@
 								}
 							},
 							"_postman_previewlanguage": "json",
-							"header": null,
+							"header": [],
 							"cookie": [],
 							"body": "{\n    \"meta\": {\n        \"error\": false,\n        \"error_message\": null,\n        \"http_response_code\": 200\n    },\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Kacang Hijau\"\n    }\n}"
 						},
@@ -351,7 +351,7 @@
 								}
 							},
 							"_postman_previewlanguage": "json",
-							"header": null,
+							"header": [],
 							"cookie": [],
 							"body": "{\r\n    \"meta\": {\r\n        \"error\": true,\r\n        \"error_message\": \"Invalid parameter\",\r\n        \"http_response_code\": 400\r\n    },\r\n    \"data\": {\r\n        \"errors\": {\r\n            \"ItemName\": \"ItemName is required\"\r\n        }\r\n    }\r\n}"
 						}
@@ -364,7 +364,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"Jamur Merah\"\r\n}",
+							"raw": "{\r\n    \"id\": 7,\r\n    \"name\": \"Baju Batik\",\r\n    \"taxes\": [\r\n        {\r\n            \"id\": 22,\r\n            \"name\": \"PJK Baju Batik\",\r\n            \"rate\": 15\r\n        },\r\n        {\r\n            \"id\": 23,\r\n            \"name\": \"PJK B Baju Batik\",\r\n            \"rate\": 15\r\n        },\r\n        {\r\n            \"id\": 24,\r\n            \"name\": \"PJK C Baju Batik\",\r\n            \"rate\": 15\r\n        },\r\n        {\r\n            \"id\": 25,\r\n            \"name\": \"Pjk C Baju Batik ke 24\",\r\n            \"rate\": 15\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -407,8 +407,8 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
 							"body": "{\r\n    \"meta\": {\r\n        \"error\": false,\r\n        \"error_message\": null,\r\n        \"http_response_code\": 200\r\n    },\r\n    \"data\": {\r\n        \"id\": 2,\r\n        \"name\": \"Jamur Merah\"\r\n    }\r\n}"
 						},
@@ -436,8 +436,8 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
 							"body": "{\r\n    \"meta\": {\r\n        \"error\": true,\r\n        \"error_message\": \"Invalid parameter\",\r\n        \"http_response_code\": 400\r\n    },\r\n    \"data\": {\r\n        \"errors\": {\r\n            \"ItemName\": \"ItemName is required\"\r\n        }\r\n    }\r\n}"
 						}
@@ -493,8 +493,8 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
 							"body": "{\r\n    \"meta\": {\r\n        \"error\": false,\r\n        \"error_message\": null,\r\n        \"http_response_code\": 200\r\n    },\r\n    \"data\": {\r\n        \"is_success\": true\r\n    }\r\n}"
 						},
@@ -522,8 +522,8 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
 							"body": "{\r\n    \"meta\": {\r\n        \"error\": true,\r\n        \"error_message\": \"Invalid parameter\",\r\n        \"http_response_code\": 400\r\n    },\r\n    \"data\": {\r\n        \"errors\": {\r\n            \"ItemId\": \"ItemId is required\"\r\n        }\r\n    }\r\n}"
 						}
@@ -579,10 +579,10 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
-							"body": null
+							"body": ""
 						}
 					]
 				}
