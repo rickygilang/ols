@@ -26,9 +26,11 @@ func (ts *ItemService) CreateItem(input req.CreateItemRequest) (item *models.Ite
 
 	item = &ts.Item
 
-	item.Name = input.ItemName
-
-	result := tx.Create(&item)
+	// result := tx.Create(&item)
+	result := tx.Create(&models.Item{
+		Name:  input.ItemName,
+		Taxes: input.Taxes,
+	})
 	if result.Error != nil {
 		responseError = &helpers.ResponseError{
 			HttpResponseCode: http.StatusInternalServerError,
@@ -67,7 +69,7 @@ func (ts *ItemService) UpdateItem(input req.ItemUpdateRequest) (item *models.Ite
 
 	tx := ts.db().Begin() // begin a transaction
 
-	// update data student in table Item
+	// update data
 	result = tx.Model(&models.Item{}).
 		Where("id = ?", input.ItemId).
 		Updates(map[string]interface{}{
