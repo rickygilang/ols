@@ -21,12 +21,12 @@ func main() {
 	port := os.Getenv("Port")
 
 	// For run on requested port
-	// if len(os.Args) > 1 {
-	// 	reqPort := os.Args[1]
-	// 	if reqPort != "" {
-	// 		port = reqPort
-	// 	}
-	// }
+	if len(os.Args) > 1 {
+		reqPort := os.Args[1]
+		if reqPort != "" {
+			port = reqPort
+		}
+	}
 
 	if port == "" {
 		port = "8080" //localhost
